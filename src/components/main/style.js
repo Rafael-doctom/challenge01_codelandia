@@ -46,3 +46,14 @@ export const Paragraph = styled.p`
     color: #717171;
     width: 900px;
 `;
+
+export const Input = styled.input`
+    margin-left:22.3vw;
+    margin-top:-5rem;
+    position:absolute;
+    width:54vw;
+    height:5vh;
+    border:1px solid gray;
+    border-radius:5px;
+    padding:0.2rem;
+`;
