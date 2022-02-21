@@ -45,6 +45,7 @@ const Main = () => {
                                     <S.Span>{item.date}</S.Span>
                                     <S.Title>{item.title}</S.Title>
                                     <S.Paragraph>{item.describe}</S.Paragraph>
+                                    <S.AuthorCard>{item.authorCard}</S.AuthorCard>
                                 </S.Card>
                             </>
                         ))

@@ -12,14 +12,18 @@ export const Content = styled.div`
 
 export const Card = styled.div`
     width: 900px;
-    height: 200px;
-    min-height: 200px;
-    max-height:250px;
+    height: 210px;
     background: #FFFFFF;
     box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.05);
     border-radius: 5px;
     margin:50px auto;
     padding:1rem;
+    position:relative;
+
+    &:hover{
+        box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.05);
+        cursor:pointer;
+    }
 `;
 
 export const Span = styled.span`
@@ -55,5 +59,19 @@ export const Input = styled.input`
     height:5vh;
     border:1px solid gray;
     border-radius:5px;
-    padding:0.2rem;
+    padding:0.5rem;
+
+    &:focus{
+        outline: none;
+        border:1px solid #3EA1DB;
+    }
+`;
+
+export const AuthorCard = styled.span`
+    color: #3EA1DB;
+    right:10px;
+    bottom:10px;
+    position:absolute;
+    z-index:999;
+    cursor:pointer;
 `;
