@@ -23,7 +23,8 @@ export const Content = styled.div`
     padding:40px 0;
     position:relative;
     z-index:0;
-
+    width:80%;
+    margin:0 auto;
     @media (max-width:768px){
         justify-content:space-between;
         padding:40px 30px;
@@ -78,8 +79,50 @@ export const DarkModeOff = styled.div`
 
 export const lightTheme = {
     body: "linear-gradient(88.27deg, #574AE8 0%, #3EA1DB 100%)",
-  };
-  
-export const darkTheme = {
-    body: "red",
 };
+
+export const darkTheme = {
+    body: "gray",
+};
+
+
+export const InputCheckbox = styled.input`
+    visibility: hidden;
+
+    &:checked + label::after {
+        left: calc(100% - 5px);
+        transform: translateX(-100%);
+    }
+
+    &:checked + label{
+        background-color: #0077FF;
+    }
+    
+`;
+
+export const Label = styled.label`
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 52px;
+    height: 27px;
+    background: grey;
+    float: right;
+    border-radius: 100px;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 90px;
+        transition: 0.5s;
+    }
+    
+    &:active:after {
+        width: 45px;
+    }
+`;

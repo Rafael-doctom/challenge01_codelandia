@@ -21,7 +21,9 @@ const Navbar = () => {
             <S.Container theme={themeActually === "light" ? lightTheme : darkTheme}>
                 <S.Content>
                     <S.Ahref href='/'>Codelândia</S.Ahref >
-                    <S.DarkModeOff onClick={DarkButton} ></S.DarkModeOff>
+                    {/* <S.DarkModeOff onClick={DarkButton} ></S.DarkModeOff> */}
+                    <S.InputCheckbox id="switch" onClick={DarkButton}  type="checkbox" name="theme" />
+                    <S.Label for="switch">Toggle</S.Label>
                 </S.Content>
             </S.Container>
         </>
