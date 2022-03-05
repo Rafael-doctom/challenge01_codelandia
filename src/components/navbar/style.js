@@ -23,15 +23,19 @@ export const Content = styled.div`
     padding:40px 0;
     position:relative;
     z-index:0;
-    width:80%;
+    width:77%;
     margin:0 auto;
+    
     @media (max-width:768px){
         justify-content:space-between;
-        padding:40px 30px;
+        padding:40px 0;
+        width:92%;
+
     }
     @media (max-width:425px){
         justify-content:space-between;
-        padding:40px 15px;
+        padding:40px 0px;
+        width:94%;
 
     }
     @media (max-width:375px){

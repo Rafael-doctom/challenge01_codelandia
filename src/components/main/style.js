@@ -33,9 +33,8 @@ export const Card = styled.div`
     }
     @media (max-width:425px){
         width: 88vw;
-        height:45vh;
-        padding:1rem 0.5rem;
-
+        height:55vh;
+        padding:1rem 1rem;
     }
     @media (max-width:375px){
         width: 88vw;
@@ -91,7 +90,6 @@ export const Input = styled.input`
 
     &:focus{
         outline: none;
-        border:1px solid #0D6EF9;
     }
 
     @media (max-width:768px){

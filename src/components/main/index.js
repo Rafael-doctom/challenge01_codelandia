@@ -24,7 +24,7 @@ const Main = () => {
         let animals = document.getElementsByClassName("animals");
         let i = 0;
         for (i = 0; i < animals.length; i++) {
-            if (!animals[i].innerHTML.toLowerCase().includes(inputValue)) {
+            if (!animals[i].innerHTML.includes(inputValue)) {
                 animals[i].style.display = "none";
             } else {
                 animals[i].style.display = "block";
