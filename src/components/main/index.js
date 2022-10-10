@@ -13,7 +13,7 @@ const Main = () => {
             .then(json => setDados(json))
     }, []);
 
-    const teste = (event) => {
+    const changeValue = (event) => {
         event.preventDefault();
         setInputValue(event.target.value)
     };
@@ -21,13 +21,13 @@ const Main = () => {
     const SearchDatasInput = (event) => {
         event.preventDefault();
 
-        let animals = document.getElementsByClassName("animals");
+        let title = document.getElementsByClassName("title");
         let i = 0;
-        for (i = 0; i < animals.length; i++) {
-            if (!animals[i].innerHTML.includes(inputValue)) {
-                animals[i].style.display = "none";
+        for (i = 0; i < title.length; i++) {
+            if (!title[i].innerHTML.includes(inputValue)) {
+                title[i].style.display = "none";
             } else {
-                animals[i].style.display = "block";
+                title[i].style.display = "block";
 
             }
         }
@@ -36,12 +36,12 @@ const Main = () => {
     return (
         <>
             <S.Container>
-                <S.Input type="text" placeholder='Pesquisar titulo...' onKeyUp={SearchDatasInput} onChange={teste} />
+                <S.Input type="text" placeholder='Pesquisar titulo...' onKeyUp={SearchDatasInput} onChange={changeValue} />
                 <S.Content>
                     {dados &&
                         dados.map(item => (
                             <>
-                                <S.Card className='animals'>
+                                <S.Card className='title'>
                                     <S.Span>{item.date}</S.Span>
                                     <S.Title>{item.title}</S.Title>
                                     <S.Paragraph>{item.describe}</S.Paragraph>
